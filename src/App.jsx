@@ -4,6 +4,7 @@ import EditModal from './components/EditModal';
 import NewToDo from './components/NewToDo';
 import FilterInput from './components/FilterInput';
 import { useToDo } from './contexts/ToDoContext';
+import loupeImg from './assets/loupe.png'
 
 function App() {
   const {
@@ -22,7 +23,7 @@ function App() {
         <button
           className="show-serach-btn"
           onClick={() => setIsFilter(!isFilter)}>
-          <img src="src/assets/loupe.png" />
+          <img src={loupeImg} />
         </button>
       </h1>
       {isFilter && <FilterInput />}

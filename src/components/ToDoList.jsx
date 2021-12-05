@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { useToDo } from '../contexts/ToDoContext';
+import editImg from '../assets/edit.png';
+import deleteImg from '../assets/bin.png';
 
 function ToDoList({ list }) {
   const { toggleTodo, removeTodo, toggleModal, todoFilter, isFilter } =
@@ -19,10 +21,10 @@ function ToDoList({ list }) {
             <p onClick={() => toggleTodo(index)}>{item.text}</p>
             <div className="btn-wrap">
               <button onClick={() => toggleModal(item.text, index)}>
-                <img src="src/assets/edit.png" />
+                <img src={editImg} />
               </button>
               <button onClick={() => removeTodo(index)}>
-                <img src="src/assets/bin.png" />
+                <img src={deleteImg} />
               </button>
             </div>
           </ListItem>
